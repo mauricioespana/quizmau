@@ -1,14 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Log In or Sign Up!
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input [(ngModel)]="user" type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="pass" type="password"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+    <button ion-button block (click)="clickLogin()">Log in</button>
+  <button ion-button clear block (click)="clickSignup()">Sign Up</button>
+  <p *ngFor= "let u of users" style="text-align: justify">
+    {{u.user}}
+    {{u.pass}}
   </p>
 </ion-content>

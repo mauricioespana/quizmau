@@ -1,0 +1,39 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <p>Enter your email</p>
+      <ion-label floating>Username</ion-label>
+      <ion-input [(ngModel)]="user" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <p>Enter your password. It has to be at least 8 digits</p>
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="pass" type="password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  <button ion-button block (click)="clickUser()">Create user</button>
+
+  <!-- <p *ngFor= "let u of users" style="text-align: justify">
+    {{u.user}}
+  </p> -->
+
+  
+</ion-content>
